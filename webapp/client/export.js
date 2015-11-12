@@ -27,8 +27,21 @@ Template.listExportedFiles.helpers({
 // Template.showExportedFile
 
 Template.showExportedFile.onCreated(function () {
-  var instance = Template.instance();
-  instance.subscribe("blob", this.blob_id);
+  var instance = this;
+  // instance.autorun(function () {
+  //   // console.log("instance.data.status:", instance.data.status);
+  //   // console.log("rerunning autorun");
+  //   // console.log("instance.data.blob_id:", instance.data.blob_id);
+  //   console.log("rerunning");
+  //   instance.subscribe("blob", instance.data.status);
+  // });
+
+  // TODO: I tried using instance.data, but apparently it's not reactive?
+  var _id = instance.data._id;
+  instance.autorun(function () {
+    var exportedFile = ExportedFiles.findOne(_id);
+    instance.subscribe("blob", exportedFile.blob_id);
+  });
 });
 
 Template.showExportedFile.helpers({

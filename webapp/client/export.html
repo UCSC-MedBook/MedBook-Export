@@ -39,7 +39,7 @@
 </template>
 
 <template name="showExportedFile">
-  <a href={{getBlobUrl}} class="list-group-item {{listGroupClass}}">
+  <div class="list-group-item {{listGroupClass}}">
     <h4 class="list-group-item-heading">
       {{#if blob_name}}
         {{blob_name}}
@@ -48,13 +48,21 @@
       {{/if}}
       <span class="pull-right">
         <span class="badge">{{status}}</span>
-        {{#unless compare status "running"}}
-          <button type="button" class="btn btn-warning btn-xs delete-file"
-              aria-label="Delete">
-            <span class="glyphicon glyphicon-trash"
+
+        {{! download button}}
+        {{#if blob_id}}
+          <a href="{{getBlobUrl}}" class="btn btn-info btn-xs">
+            <span class="glyphicon glyphicon-download-alt"
                 aria-hidden="true"></span>
-          </button>
-        {{/unless}}
+          </a>
+        {{/if}}
+
+        {{! delete button}}
+        <button type="button" class="btn btn-warning btn-xs delete-file"
+            aria-label="Delete">
+          <span class="glyphicon glyphicon-trash"
+              aria-hidden="true"></span>
+        </button>
       </span>
     </h4>
 
@@ -68,5 +76,5 @@
         <p class="list-group-item-text">{{this}}</p>
       {{/each}}
     </ul>
-  </a>
+  </div>
 </template>
