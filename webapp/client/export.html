@@ -57,8 +57,16 @@
         {{/unless}}
       </span>
     </h4>
-    {{#each collaborations}}
-      <p class="list-group-item-text">{{this}}</p>
-    {{/each}}
+
+    {{#if error_description}}
+      <p class="list-group-item-text">{{error_description}}</p>
+    {{/if}}
+
+    <p class="list-group-item-text">Collaborations:</p>
+    <ul>
+      {{#each collaborations}}
+        <p class="list-group-item-text">{{this}}</p>
+      {{/each}}
+    </ul>
   </a>
 </template>
