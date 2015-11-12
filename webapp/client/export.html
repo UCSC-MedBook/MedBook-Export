@@ -1,0 +1,64 @@
+<template name="export">
+
+  <h1>
+    Export
+    <small>create flat files using Medbook</small>
+  </h1>
+
+  {{> exportNew}}
+
+  {{> listExportedFiles}}
+</template>
+
+<template name="exportNew">
+  <h3>Export new file</h3>
+  {{#if currentUser}}
+    <form role="form">
+      <select id="collaboration-select" class="form-control">
+        {{#each collaborations}}
+          <option>{{this}}</option>
+        {{/each}}
+      </select>
+    </form>
+    <button id="export-copy-number" type="button" class="btn btn-default btn-md"
+        aria-label="Copy number flat file">
+      Create copy number flat file
+    </button>
+  {{else}}
+    <span class="help-block">Loading...</span>
+  {{/if}}
+</template>
+
+<template name="listExportedFiles">
+  <h3>Exported files</h3>
+  <div class="list-group">
+    {{#each exportedFiles}}
+      {{> showExportedFile this}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="showExportedFile">
+  <a href={{getBlobUrl}} class="list-group-item {{listGroupClass}}">
+    <h4 class="list-group-item-heading">
+      {{#if blob_name}}
+        {{blob_name}}
+      {{else}}
+        Copy number data
+      {{/if}}
+      <span class="pull-right">
+        <span class="badge">{{status}}</span>
+        {{#unless compare status "running"}}
+          <button type="button" class="btn btn-warning btn-xs delete-file"
+              aria-label="Delete">
+            <span class="glyphicon glyphicon-trash"
+                aria-hidden="true"></span>
+          </button>
+        {{/unless}}
+      </span>
+    </h4>
+    {{#each collaborations}}
+      <p class="list-group-item-text">{{this}}</p>
+    {{/each}}
+  </a>
+</template>

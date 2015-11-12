@@ -10,8 +10,8 @@ Router.configure({
 });
 
 Router.map(function() {
-  this.route('download', {
-    path: '/Download/',
+  this.route('export', {
+    path: '/Export/',
     // subscriptions: function () {
     //   return Meteor.subscribe("listSubmissions");
     // },
