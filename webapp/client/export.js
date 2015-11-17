@@ -56,14 +56,17 @@ Template.showExportedFile.helpers({
     if (this.status === "done" && this.blob_id) {
       var blob = Blobs.findOne(this.blob_id);
       if (blob && blob.hasStored('blobs')) {
-        return blob.url();
+        return "data:text/csv," + blob.url();
       }
     }
+  },
+  getBlobName: function () {
+    return this.blob_name;
   },
 });
 
 Template.showExportedFile.events({
   'click .delete-file': function (event, instance) {
     Meteor.call('removeExportedFile', this._id);
-  }
+  },
 });

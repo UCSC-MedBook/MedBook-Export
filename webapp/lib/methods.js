@@ -19,6 +19,13 @@ Meteor.methods({
     check(collaborations, [String]);
     var user_id = makeSureLoggedIn();
 
+    var validCollaborations = Meteor.user().profile.collaborations;
+    _.map(collaborations, function (value) {
+      if (validCollaborations.indexOf(value) === -1) {
+        throw "invalid collaboration: " + value;
+      }
+    });
+
     var exported_file_id = ExportedFiles.insert({
       user_id: user_id,
       date_created: new Date(),

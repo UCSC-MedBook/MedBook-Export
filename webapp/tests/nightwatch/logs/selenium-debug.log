@@ -1,0 +1,70 @@
+15:50:11.423 INFO - Launching a standalone server
+Setting system property webdriver.chrome.driver to /usr/local/lib/node_modules/starrynight/node_modules/chromedriver/bin/chromedriver
+15:50:11.458 INFO - Java: Oracle Corporation 24.75-b04
+15:50:11.458 INFO - OS: Mac OS X 10.11 x86_64
+15:50:11.468 INFO - v2.45.0, with Core v2.45.0. Built from revision 5017cb8
+15:50:11.555 INFO - Default driver org.openqa.selenium.ie.InternetExplorerDriver registration is skipped: registration capabilities Capabilities [{platform=WINDOWS, ensureCleanSession=true, browserName=internet explorer, version=}] does not match with current platform: MAC
+15:50:11.584 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+15:50:11.585 INFO - Version Jetty/5.1.x
+15:50:11.585 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+15:50:11.586 INFO - Started HttpContext[/selenium-server,/selenium-server]
+15:50:11.586 INFO - Started HttpContext[/,/]
+15:50:11.614 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@6ea43ee0
+15:50:11.614 INFO - Started HttpContext[/wd,/wd]
+15:50:11.618 INFO - Started SocketListener on 0.0.0.0:4444
+15:50:11.618 INFO - Started org.openqa.jetty.jetty.Server@792bf755
+15:50:11.895 INFO - Executing: [new session: Capabilities [{loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@17829770, platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=App Layout}]])
+15:50:11.904 INFO - Creating a new session for Capabilities [{loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@17829770, platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=App Layout}]
+Starting ChromeDriver 2.15.322455 (ae8db840dac8d0c453355d3d922c91adfb61df8f) on port 32539
+Only local connections are allowed.
+15:50:13.464 INFO - Done: [new session: Capabilities [{loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@17829770, platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=App Layout}]]
+15:50:13.475 INFO - Executing: [get: http://localhost:3000/Export])
+15:50:14.550 INFO - Done: [get: http://localhost:3000/Export]
+15:50:14.556 INFO - Executing: [set window size])
+15:50:14.784 INFO - Done: [set window size]
+15:50:14.789 INFO - Executing: [find elements: By.cssSelector: body])
+15:50:14.821 INFO - Done: [find elements: By.cssSelector: body]
+15:50:14.826 INFO - Executing: [find element: By.cssSelector: body > div > h1])
+15:50:14.841 INFO - Done: [find element: By.cssSelector: body > div > h1]
+15:50:14.844 INFO - Executing: [get text: 1 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: body > div > h1]])
+15:50:14.864 INFO - Done: [get text: 1 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: body > div > h1]]
+15:50:14.876 INFO - Executing: [find elements: By.cssSelector: #login-buttons])
+15:50:14.891 INFO - Done: [find elements: By.cssSelector: #login-buttons]
+15:50:14.894 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-buttons]])
+15:50:14.911 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-buttons]]
+15:50:14.916 INFO - Executing: [find element: By.cssSelector: #login-sign-in-link])
+15:50:14.934 INFO - Done: [find element: By.cssSelector: #login-sign-in-link]
+15:50:14.938 INFO - Executing: [click: 3 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-sign-in-link]])
+15:50:14.983 INFO - Done: [click: 3 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-sign-in-link]]
+15:50:15.395 INFO - Executing: [find elements: By.cssSelector: #login-dropdown-list])
+15:50:15.412 INFO - Done: [find elements: By.cssSelector: #login-dropdown-list]
+15:50:15.416 INFO - Executing: [find elements: By.cssSelector: #login-email])
+15:50:15.430 INFO - Done: [find elements: By.cssSelector: #login-email]
+15:50:15.435 INFO - Executing: [find elements: By.cssSelector: #login-password])
+15:50:15.448 INFO - Done: [find elements: By.cssSelector: #login-password]
+15:50:15.452 INFO - Executing: [find element: By.cssSelector: #login-email])
+15:50:15.467 INFO - Done: [find element: By.cssSelector: #login-email]
+15:50:15.472 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-email], [w, c, d, t, @, u, c, s, c, ., e, d, u]])
+15:50:15.559 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-email], [w, c, d, t, @, u, c, s, c, ., e, d, u]]
+15:50:15.563 INFO - Executing: [find element: By.cssSelector: #login-password])
+15:50:15.605 INFO - Done: [find element: By.cssSelector: #login-password]
+15:50:15.611 INFO - Executing: [send keys: 6 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-password], [w, c, d, t, u, c, s, c, e, d, u]])
+15:50:15.655 INFO - Done: [send keys: 6 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-password], [w, c, d, t, u, c, s, c, e, d, u]]
+15:50:15.661 INFO - Executing: [find element: By.cssSelector: #login-buttons-password])
+15:50:15.685 INFO - Done: [find element: By.cssSelector: #login-buttons-password]
+15:50:15.688 INFO - Executing: [click: 7 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-buttons-password]])
+15:50:15.716 INFO - Done: [click: 7 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #login-buttons-password]]
+15:50:16.724 INFO - Executing: [find elements: By.cssSelector: #export-copy-number])
+15:50:16.739 INFO - Done: [find elements: By.cssSelector: #export-copy-number]
+15:50:16.742 INFO - Executing: [is displayed: 8 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #export-copy-number]])
+15:50:16.753 INFO - Done: [is displayed: 8 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #export-copy-number]]
+15:50:16.757 INFO - Executing: [find element: By.cssSelector: #export-copy-number])
+15:50:16.770 INFO - Done: [find element: By.cssSelector: #export-copy-number]
+15:50:16.773 INFO - Executing: [click: 8 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #export-copy-number]])
+15:50:16.803 INFO - Done: [click: 8 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: #export-copy-number]]
+15:50:16.811 INFO - Executing: [find elements: By.cssSelector: .list-group .list-group-item-info])
+15:50:16.863 INFO - Done: [find elements: By.cssSelector: .list-group .list-group-item-info]
+15:50:16.868 INFO - Executing: [is displayed: 9 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: .list-group .list-group-item-info]])
+15:50:16.882 INFO - Done: [is displayed: 9 [[ChromeDriver: chrome on MAC (8765fb77220856c5cb983f297a2a27df)] -> css selector: .list-group .list-group-item-info]]
+15:50:16.888 INFO - Executing: [delete session: d64ff408-2a30-49a5-9ba7-be22676a9c46])
+15:50:17.470 INFO - Done: [delete session: d64ff408-2a30-49a5-9ba7-be22676a9c46]

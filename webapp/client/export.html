@@ -5,28 +5,31 @@
     <small>create flat files using Medbook</small>
   </h1>
 
-  {{> exportNew}}
+  {{#if currentUser}}
+    {{> exportNew}}
 
-  {{> listExportedFiles}}
+    {{> listExportedFiles}}
+  {{else}}
+    <span class="help-block">
+      Please sign in to access this app.<br />
+      If you have already signed in, please wait while your user data loads.
+    </span>
+  {{/if}}
 </template>
 
 <template name="exportNew">
   <h3>Export new file</h3>
-  {{#if currentUser}}
-    <form role="form">
-      <select id="collaboration-select" class="form-control">
-        {{#each collaborations}}
-          <option>{{this}}</option>
-        {{/each}}
-      </select>
-    </form>
-    <button id="export-copy-number" type="button" class="btn btn-default btn-md"
-        aria-label="Copy number flat file">
-      Create copy number flat file
-    </button>
-  {{else}}
-    <span class="help-block">Loading...</span>
-  {{/if}}
+  <form role="form">
+    <select id="collaboration-select" class="form-control">
+      {{#each collaborations}}
+        <option>{{this}}</option>
+      {{/each}}
+    </select>
+  </form>
+  <button id="export-copy-number" type="button" class="btn btn-default btn-md"
+      aria-label="Copy number flat file">
+    Create copy number flat file
+  </button>
 </template>
 
 <template name="listExportedFiles">
@@ -50,8 +53,9 @@
         <span class="badge">{{status}}</span>
 
         {{! download button}}
-        {{#if blob_id}}
-          <a href="{{getBlobUrl}}" class="btn btn-info btn-xs">
+        {{#if getBlobUrl}}
+          <a download="{{getBlobName}}" href="{{getBlobUrl}}"
+              class="btn btn-info btn-xs">
             <span class="glyphicon glyphicon-download-alt"
                 aria-hidden="true"></span>
           </a>
